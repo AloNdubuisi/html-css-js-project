@@ -86,7 +86,8 @@ label{
 
 label, input[type="text"], 
 label, input[type="email"], 
-button[type="submit"], label textarea{
+button[type="submit"], 
+label textarea{
     margin-top: 10px;
 }
 
@@ -150,12 +151,12 @@ header .sub-highlight, header .current a{
 
 /*====Showcase*/
 #slider{
-    min-height:600px;
+    min-height:800px;
     /* width: 500px; */
     background-image: linear-gradient(
-        rgba(0,0,0,0.6), 
-        rgba(0,0,0,0.6)), 
-        url("../images/hero-image.jpg");
+        rgba(0,0,0,0.64), 
+        rgba(0,0,0,0.64)), 
+        url("../images/image8.jpg");
     background-repeat: no-repeat;
     text-align: center;
     color: #ffff;
@@ -165,19 +166,21 @@ header .sub-highlight, header .current a{
     /* opacity: 0.5; */
 }
 
-#slider h1{
-    margin-top: 120px;
+#slider p{
+    margin-top: 300px;
     font-size: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: bolder;
     color: #fff;
-    text-shadow: 1px 1px 2px #e8491d;
-    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    text-shadow:2px 2px 2px #e8491d;
 }
 
-#slider p{
+/* #slider p{
     font-size: 20px;
-}
+    margin-top: 50px;
+} */
 
 #newsletter{
     padding: 15px;
@@ -282,7 +285,7 @@ footer{
 
 /*===ADDING MEDIA QUERRIES FOR RESPONSIVENESS=====*/
 
-@media(max-width:768px){
+@media(max-width:760px){
     header #branding,
     header nav,
     header nav li,
@@ -296,16 +299,24 @@ footer{
         width: 100%;
     }
 
+    .sub-highlight{
+        display: block
+    }
+
     header{
         padding-bottom: 20px;
     }
 
-    #slider h1{
-        line-height: normal;
+    #slider p{
+        /* line-height: 75px; */
+        display: inline-flex;
+        margin-top: 180px;
+        font-size: 3.1em;
+
     }
 
     #showcase h1{
-        margin-top: 40px;
+        margin-top: 10px;
         line-height: normal;
     }
 
@@ -362,6 +373,7 @@ footer{
 
     .hamburger{
         display: block;
+        padding-top: 15px;
     }
 
     .hamburger.active .bar:nth-child(2){
@@ -378,7 +390,7 @@ footer{
     .nav-menu{
         position: fixed;
         left: -100%;
-        top: 100px;
+        top: 150px;
         gap: 0;
         flex: column;
         background: #07212e;
