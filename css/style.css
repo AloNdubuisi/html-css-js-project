@@ -92,15 +92,19 @@ label textarea{
 }
 
 form.color input[type="text"],
-form.color input[type="email"]
+form.color input[type="email"],
+label, textarea
 {
     border: 0;
     border-radius: 3px;
-    height: 25px;
-    width: 250px;
+    height: 45px;
+    width: 270px;
+    padding-left: 10px;
 }
 
-
+label, textarea{
+    height: 120px;
+}
 
 header li{
     float: left;
@@ -121,12 +125,14 @@ header nav{
     margin-top: 10px;
 }
 
-header .highlight, header .current a{
+header .highlight, 
+header .current a{
     color: #e8491d;
     font-weight: bolder;
 }
 
-header .sub-highlight, header .current a{
+header .sub-highlight, 
+header .current a{
     font-size: 16px;
     margin: 0;
 }
@@ -194,8 +200,6 @@ header .sub-highlight, header .current a{
     float: left;
     padding-top: 15px;
 }
-
-
 
 #newsletter form{
     float: right;
@@ -308,7 +312,6 @@ footer{
     }
 
     #slider p{
-        /* line-height: 75px; */
         display: inline-flex;
         margin-top: 180px;
         font-size: 3.1em;
