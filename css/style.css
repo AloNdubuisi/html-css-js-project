@@ -103,7 +103,7 @@ label, textarea
 }
 
 label, textarea{
-    height: 120px;
+    height: 100px;
 }
 
 header li{
@@ -301,6 +301,15 @@ footer{
         float: none;
         text-align: center;
         width: 100%;
+    }
+
+    .color{
+        padding: 15px;
+        background: #07212e;
+        color: #ffff;
+        border: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .sub-highlight{
