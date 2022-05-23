@@ -306,7 +306,7 @@ footer{
 form.color input[type="text"],
 form.color input[type="email"],
 label, textarea{
-    width: 250px;
+    width: 200px;
     height: 30px;
 }
 
