@@ -5,7 +5,7 @@
 }
 body{
     font: 15px/1.5 Arial, Helvetica, sans-serif;
-    background-color: #f9f8f8;
+    background-color: #eee;
 }
 
 /*===The Global class=====*/
@@ -27,6 +27,7 @@ header{
     top: 0;
     width: 100%;
     position: fixed;
+    z-index: 2;
 }
 
 ul{
@@ -174,13 +175,13 @@ header .current a{
 
 #slider p{
     margin-top: 300px;
-    font-size: 50px;
+    font-size: 2.5rem;
     margin-bottom: 15px;
     font-weight: bolder;
     color: #fff;
     display: flex;
     justify-content: center;
-    text-shadow:2px 2px 2px #e8491d;
+    text-shadow:5px 5px 5px #331007;
 }
 
 /* #slider p{
@@ -192,7 +193,7 @@ header .current a{
     padding: 15px;
     color: #ffff;
     /* background: #34495e; */
-    background: #333333;   
+    background: #07212e;   
 }
 
 
@@ -214,22 +215,95 @@ header .current a{
 
 /*====Showcase End*/
 
-/*====Boxes========*/
+/*==== Display of Courses in Boxes & Cards========*/
 #boxes{
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-#boxes .box{
+.card{
+    font-family: "Candara", sans-serif;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(1, 1, 1, 0.5);
     float: left;
-    width: 30%;
-    padding: 10px;
+    margin: 50px;
+  }
+
+#boxes .box .card{
+    float: left;
+    width: 300px;
+    padding: 5px;
     text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
 }
 
-#boxes .box img{
-    width: 90px;
-}
-/*====Boxes End=====*/
+.card-image img{
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+  }
+
+  .profile-image img{
+    z-index: 0;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin-top: -75px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100px;
+    border: 8px solid #053852;
+    transition-duration: 0.5s;
+    transition-property: transform;
+  }
+
+  .profile-image img:hover{
+    transform: scale(1.5);
+    border:3px solid #053852;
+  }
+  
+  .card-content h4{
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+  }
+  
+  .card-content p{
+    font-size: 16px;
+    text-align: justify;
+    padding: 0 20px 5px 20px;
+    gap: 5px;
+  }
+  
+  .icons{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 30px;
+  }
+  
+  .icons a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #0ABDE3;
+    padding: 0 14px;
+    transition-duration: 0.4s;
+    transition-property: transform;
+  }
+  
+  .icons a:hover{
+    color: #000;
+    transform: scale(1.5);
+  }
+/*====End Display of Courses in Boxes & Cards========*/
 
 
 /*====SideBar========*/
@@ -266,12 +340,6 @@ ul#services li{
     background: #e6e6e6;
 }
 /*====Services End====*/
-
-
-
-/* =========Contact Form page css======== */
-
-/* =========End Contact Form page css======== */
 
 
 
@@ -416,3 +484,156 @@ label, textarea{
         left: 0;
     }
 }
+/* ==================== */
+
+
+/* =========Login Form page css======== */
+
+:root {
+    --color: #4973ff;
+}
+
+.hero {
+    position: relative;
+    /* z-index: 1; */
+    position: relative;
+    background: #07212e;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ========================= */
+
+.waves {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+height: 200px;
+background-color: var(--color);
+box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+transition: 500ms;
+}
+
+.waves::before,
+.waves::after {
+content: '';
+position: absolute;
+width: 300vw;
+height: 300vw;
+top: -65vw;
+left: 50%;
+transform: translate(-50%, -75%);
+}
+
+.waves::before {
+border-radius: 44%;
+background: rgba(51, 51, 51, 1);
+animation: waves 8s linear infinite;
+}
+
+.waves::after {
+border-radius: 44%;
+background: rgba(51, 51, 51, 0.5);
+animation: waves 15s linear infinite;
+}
+
+@keyframes waves {
+0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+}
+
+100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+}
+}
+
+/* =========End login Form page css======== */
+
+
+.login-box {
+    position: absolute;
+    /* position: relative; */
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #053852;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 5px #3994c1, -3px -3px 5px #398eb9;
+    border-radius: 5px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000;;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #053852;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #07212e;
+    border: 2px solid #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+    background: #07212e;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
