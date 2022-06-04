@@ -157,21 +157,60 @@ header .current a{
 /*===Heade End==r*/
 
 /*====Showcase*/
+.load{
+    animation: slide 5s;
+}
 #slider{
     min-height:800px;
-    /* width: 500px; */
-    background-image: linear-gradient(
-        rgba(0,0,0,0.64), 
-        rgba(0,0,0,0.64)), 
-        url("../images/image8.jpg");
+    /* background-image: linear-gradient(
+        rgba(0,0,0,0.3), 
+        rgba(0,0,0,0.3)), 
+        url("../images/hero_img.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80"); */
     background-repeat: no-repeat;
     text-align: center;
     color: #ffff;
     background-size: cover;
     background-position: center;
     font-weight: bolder;
-    /* opacity: 0.5; */
+    animation: slide 45s infinite;
+}   
+/* ================================= */
+
+@keyframes slide{
+    0%{
+      background-image: url('../images/hero_img.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80');  
+    }
+    20%{
+        background-image: url('../images/alo1.jpg');
+    }
+    20.01%{
+        background-image: url('../images/image9.jpg');  
+      }
+      40%{
+          background-image: url('../images/hero-image.jpg');
+      }
+      40.01%{
+        background-image: url('../images/image8.jpg');  
+      }
+      60%{
+          background-image: url('../images/alo3.PNG');
+      }
+      60.01%{
+        background-image: url('../images/image8.jpg');  
+      }
+      80%{
+          background-image: url('../images/image9.jpg');
+      }
+      80.01%{
+        background-image: url('../images/image1.jpg');  
+      }
+      100%{
+          background-image: url('../images/alo2.jpg');
+      }
 }
+
+    
+    
 
 #slider p{
     margin-top: 300px;
